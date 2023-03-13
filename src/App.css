@@ -37,12 +37,14 @@
   position: absolute;
   bottom: 0;
   padding: 0;
-  border: 0.5px solid gray;
+  border: none;
   font-size: 16px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .inputText:focus {
   outline: none;
   border: 1px solid #a666ff;
+  border-radius: 10px;
 }
