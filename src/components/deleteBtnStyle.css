@@ -1,9 +1,9 @@
 .deleteButtonContainer {
-  width: 25px;
-  height: 25px;
-  font-size: 25px;
+  width: 23px;
+  height: 23px;
+  font-size: 23px;
   cursor: pointer;
 }
 .deleteButtonContainer:hover {
-  color: #a666ff;
+  color: #ff387e;
 }

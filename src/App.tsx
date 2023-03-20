@@ -6,7 +6,12 @@ function App() {
   return (
     <div className='mainContainer'>
       <div className='appContainer'>
-        <Item text='ㅎㅇ' />
+        <Item text='테스트' />
+        <Item text='테스트 테스트' />
+        <Item
+          text='테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 '
+          completed
+        />
         <input
           type='text'
           className='inputText'

@@ -1,19 +1,19 @@
 .CheckBoxContainer {
+  width: 20px;
+  height: 20px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  border: 1px solid gray;
+  border: 1.5px solid #000;
   border-radius: 50px;
   cursor: pointer;
 }
 .CheckBoxContainer:hover {
-  border: 1px solid #a666ff;
+  border: 1.5px solid #ff387e;
 }
 .checkIcon {
   position: absolute;
-  font-size: 20px;
+  font-size: 15px;
   color: #ff387e;
 }
