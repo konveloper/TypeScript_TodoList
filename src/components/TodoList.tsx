@@ -30,6 +30,10 @@ const TodoList = () => {
       )
     );
   };
+
+  const handleClickDeleteBtn = (id: number) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
   return (
     <div>
       {tasks.map((task) => (
@@ -38,6 +42,7 @@ const TodoList = () => {
           text={task.text}
           completed={task.completed}
           onClickCheckBox={handleClickCheckBox}
+          onClickDeleteBtn={handleClickDeleteBtn}
         />
       ))}
     </div>

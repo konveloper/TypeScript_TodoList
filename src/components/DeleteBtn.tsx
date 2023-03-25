@@ -9,7 +9,7 @@ interface DeleteBtnProps {
 const DeleteBtn = ({ onClick }: DeleteBtnProps) => {
   return (
     <>
-      <div className='deleteButtonContainer' onClick={onClick}>
+      <div className='deleteBtnContainer' onClick={onClick}>
         <BsTrash />
       </div>
     </>

@@ -6,18 +6,25 @@ import './itemStyle.css';
 
 interface ItemProps {
   onClickCheckBox(id: number): void;
+  onClickDeleteBtn(id: number): void;
   completed?: boolean;
   text: string;
   id: number;
 }
 
-const Item = ({ onClickCheckBox, completed, text, id }: ItemProps) => {
+const Item = ({
+  onClickCheckBox,
+  onClickDeleteBtn,
+  completed,
+  text,
+  id,
+}: ItemProps) => {
   return (
     <>
       <div className='itemContainer'>
         <CheckBox checked={completed} onClick={() => onClickCheckBox(id)} />
         <Text completed={completed}>{text}</Text>
-        <DeleteBtn />
+        <DeleteBtn onClick={() => onClickDeleteBtn(id)} />
       </div>
     </>
   );
