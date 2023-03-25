@@ -4,7 +4,7 @@ import Item from './Item';
 interface TodoListProps {}
 
 const TodoList = () => {
-  const [task, setTask] = useState([
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       text: '할 일 1',
@@ -23,10 +23,22 @@ const TodoList = () => {
   ]);
   const nextId = useRef(4);
 
+  const handleClickCheckBox = (id: number) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
   return (
     <div>
-      {task.map((task) => (
-        <Item text={task.text} completed={task.completed} />
+      {tasks.map((task) => (
+        <Item
+          id={task.id}
+          text={task.text}
+          completed={task.completed}
+          onClickCheckBox={handleClickCheckBox}
+        />
       ))}
     </div>
   );

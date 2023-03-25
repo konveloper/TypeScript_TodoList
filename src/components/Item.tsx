@@ -5,15 +5,17 @@ import Text from './Text';
 import './itemStyle.css';
 
 interface ItemProps {
+  onClickCheckBox(id: number): void;
   completed?: boolean;
   text: string;
+  id: number;
 }
 
-const Item = ({ completed, text }: ItemProps) => {
+const Item = ({ onClickCheckBox, completed, text, id }: ItemProps) => {
   return (
     <>
       <div className='itemContainer'>
-        <CheckBox checked={completed} />
+        <CheckBox checked={completed} onClick={() => onClickCheckBox(id)} />
         <Text completed={completed}>{text}</Text>
         <DeleteBtn />
       </div>
